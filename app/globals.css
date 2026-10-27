@@ -102,3 +102,19 @@ html,body,.app-layout,.workspace{background-color:#060812;color:#eef1fa}
 .app-layout .topbar-chip{background:#171b2a!important;color:#a5aabd!important;border-color:#252a3a!important}
 .app-layout .primary{background:#439e91!important;color:#fff!important;border-color:#439e91!important}
 .app-layout .positive{color:#51c99b!important}.app-layout .negative{color:#f07887!important}
+
+/* Theme and custom CSS editor */
+.theme-open{white-space:nowrap}
+.theme-panel{background:#101321;border:1px solid #30364a;border-radius:14px;padding:18px;margin:0 0 18px;color:#eef1fa;box-shadow:0 16px 40px #0003}
+.theme-panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:16px}
+.theme-panel-head h2{font-size:17px;margin:0 0 5px}.theme-panel-head p{font-size:12px;color:#969bad;margin:0}
+.theme-controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:14px}
+.theme-controls label,.custom-css-label{display:flex;flex-direction:column;gap:7px;color:#b8bdce;font-size:12px;font-weight:600}
+.theme-controls select,.theme-controls input[type=color],.custom-css-label textarea{width:100%;min-width:0;background:#0b0e19;color:#eef1fa;border:1px solid #30364a;border-radius:8px;padding:10px}
+.theme-controls input[type=color]{height:42px;padding:4px}
+.custom-css-label textarea{resize:vertical;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-weight:400;font-size:12px;line-height:1.55}
+.theme-panel-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:12px}
+.app-layout.theme-light .theme-panel{background:#fff;color:#202638;border-color:#d5dce7}
+.app-layout.theme-light .theme-panel-head p,.app-layout.theme-light .theme-controls label,.app-layout.theme-light .custom-css-label{color:#485166}
+.app-layout.theme-light .theme-controls select,.app-layout.theme-light .custom-css-label textarea{background:#f7f9fc;color:#202638;border-color:#d5dce7}
+@media(max-width:650px){.theme-controls{grid-template-columns:1fr}.theme-panel{padding:13px}.theme-open{font-size:11px}}

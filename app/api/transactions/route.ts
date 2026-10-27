@@ -15,7 +15,14 @@ export async function POST(request:Request) {
  if(!["income","expense"].includes(type)) return NextResponse.json({error:"Loại giao dịch không hợp lệ."},{status:400});
  if(!Number.isFinite(amount)||amount<=0||amount>1000000000000) return NextResponse.json({error:"Số tiền phải lớn hơn 0."},{status:400});
  if(!category||!/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(date)) return NextResponse.json({error:"Danh mục hoặc ngày chưa hợp lệ."},{status:400});
- const sql=getSql(); const rows=await sql.query("INSERT INTO transactions(user_id,type,amount,category,description,occurred_at) VALUES($1,$2,$3,$4,$5,$6::date) RETURNING id,type,amount::float8 AS amount,category,description,to_char(occurred_at, 'YYYY-MM-DD') AS occurred_at",[user.id,type,amount,category,description,date]);
+ const sql=getSql();
+ if(Array.isArray(b?.bulkDates)){
+   const dates=[...new Set(b.bulkDates.map((v)=>String(v)))];
+   if(type!=="expense"||dates.length<1||dates.length>7||dates.some((v)=>!/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(v)||Number.isNaN(Date.parse(v+"T00:00:00Z")))) return NextResponse.json({error:"Danh sách ngày không hợp lệ (tối đa 7 ngày)."}, {status:400});
+   const rows=await sql.query("INSERT INTO transactions(user_id,type,amount,category,description,occurred_at) SELECT $1,'expense',$2,$3,$4,d::date FROM unnest($5::text[]) AS d RETURNING id,type,amount::float8 AS amount,category,description,to_char(occurred_at, 'YYYY-MM-DD') AS occurred_at",[user.id,amount,category,description,dates]);
+   return NextResponse.json({transactions:rows,count:rows.length},{status:201});
+ }
+ const rows=await sql.query("INSERT INTO transactions(user_id,type,amount,category,description,occurred_at) VALUES($1,$2,$3,$4,$5,$6::date) RETURNING id,type,amount::float8 AS amount,category,description,to_char(occurred_at, 'YYYY-MM-DD') AS occurred_at",[user.id,type,amount,category,description,date]);
  return NextResponse.json({transaction:rows[0]},{status:201}); } catch(e) { console.error("transactions POST failed",e); return NextResponse.json({error:"Không thể lưu giao dịch. Kiểm tra cấu hình và bảng dữ liệu."},{status:500}); }
 }
 export async function DELETE(request:Request) {

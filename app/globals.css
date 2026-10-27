@@ -351,3 +351,74 @@ html,body,.app-layout,.workspace{background-color:#060812;color:#eef1fa}
 #spendwise-root.theme-light .custom-css-label textarea{
   background:#ffffff!important;color:#20283a!important;border-color:#cbd4e2!important;
 }
+
+
+/* Final pass: cover nested form/report surfaces missed by the first light-theme pass */
+#spendwise-root.theme-light .budget-form,
+#spendwise-root.theme-light .stack,
+#spendwise-root.theme-light .simulator-form,
+#spendwise-root.theme-light .report-switcher,
+#spendwise-root.theme-light .filter-intro,
+#spendwise-root.theme-light .filter-actions,
+#spendwise-root.theme-light .theme-controls,
+#spendwise-root.theme-light .theme-panel-head,
+#spendwise-root.theme-light .modal-head,
+#spendwise-root.theme-light .modal-actions,
+#spendwise-root.theme-light .trend-controls,
+#spendwise-root.theme-light .trend-chart-panel,
+#spendwise-root.theme-light .simulation-result,
+#spendwise-root.theme-light .budget-item,
+#spendwise-root.theme-light .weekday-picker,
+#spendwise-root.theme-light .report-tabs{
+  background-color:transparent!important;
+  background-image:none!important;
+  color:#30394d!important;
+}
+#spendwise-root.theme-light .budget-form input,
+#spendwise-root.theme-light .budget-form select,
+#spendwise-root.theme-light .stack input,
+#spendwise-root.theme-light .stack select,
+#spendwise-root.theme-light .simulator-form input,
+#spendwise-root.theme-light .modal input,
+#spendwise-root.theme-light .modal select,
+#spendwise-root.theme-light .theme-controls select,
+#spendwise-root.theme-light .theme-controls input[type="color"]{
+  background:#fff!important;color:#20283a!important;border-color:#cbd4e2!important;color-scheme:light!important;
+}
+#spendwise-root.theme-light .filter-actions button,
+#spendwise-root.theme-light .report-tabs button,
+#spendwise-root.theme-light .modal .link,
+#spendwise-root.theme-light .delete{
+  background:transparent!important;color:#596579!important;border-color:#dce2ec!important;
+}
+#spendwise-root.theme-light .filter-actions button.filter-active,
+#spendwise-root.theme-light .report-tabs button.chosen{
+  background:#e7f4f0!important;color:#245e53!important;border-color:#c5e3db!important;
+}
+#spendwise-root.theme-light .trend-chart-panel,
+#spendwise-root.theme-light .trend-controls,
+#spendwise-root.theme-light .simulation-result,
+#spendwise-root.theme-light .report-switcher{
+  border:1px solid #dce2ec!important;border-radius:13px!important;
+}
+#spendwise-root.theme-light .trend-controls h3,
+#spendwise-root.theme-light .trend-controls p,
+#spendwise-root.theme-light .trend-chart-panel h3,
+#spendwise-root.theme-light .trend-chart-panel p,
+#spendwise-root.theme-light .report-heading p,
+#spendwise-root.theme-light .report-stat span,
+#spendwise-root.theme-light .chart-legend,
+#spendwise-root.theme-light .trend-month small{
+  color:#687386!important;
+}
+#spendwise-root.theme-light .trend-chart{
+  background-color:#f5f7fb!important;
+  background-image:repeating-linear-gradient(to bottom,transparent 0,transparent 24%,#e4e9f1 24.5%,transparent 25%)!important;
+  border-color:#dce2ec!important;
+}
+#spendwise-root.theme-light .app-topbar .brand,
+#spendwise-root.theme-light .app-topbar .logo{color:#fff!important}
+#spendwise-root.theme-light .app-topbar .logo{background:var(--custom-accent,#439e91)!important}
+#spendwise-root.theme-light .sidebar .user-area .secondary{background:#edf1f7!important;color:#30394d!important;border-color:#d5dce7!important}
+#spendwise-root.theme-light .weekday-option:has(input:checked){background:#e7f4f0!important;color:#245e53!important;border-color:#c5e3db!important}
+#spendwise-root.theme-light .ring{background:transparent!important;color:#30394d!important}

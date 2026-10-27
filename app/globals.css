@@ -228,6 +228,48 @@ html,body,.app-layout,.workspace{background-color:#060812;color:#eef1fa}
 }
 
 
+/* Overview dashboard: clear hierarchy, balanced panels, and useful at-a-glance details */
+#spendwise-root .overview-categories,
+#spendwise-root .overview-recent{min-width:0}
+#spendwise-root .overview-panel-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:17px}
+#spendwise-root .overview-panel-heading h2{margin:0 0 5px}
+#spendwise-root .overview-panel-heading p{margin:0}
+#spendwise-root .text-action{border:0;background:transparent;color:#63cbb8;font-size:11px;font-weight:700;padding:5px 0;white-space:nowrap}
+#spendwise-root .overview-category-list{display:grid;gap:17px}
+#spendwise-root .overview-category-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:9px}
+#spendwise-root .overview-category-top>span{display:flex;align-items:center;gap:9px;font-size:12px;color:var(--app-text,#edf0fa)}
+#spendwise-root .overview-category-top strong{font-size:12px;white-space:nowrap}
+#spendwise-root .category-dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#63cbb8;flex-shrink:0}
+#spendwise-root .category-dot-1{background:#e8ae62}#spendwise-root .category-dot-2{background:#8b9cf4}#spendwise-root .category-dot-3{background:#e77f99}#spendwise-root .category-dot-4{background:#66b7e8}
+#spendwise-root .overview-category .budget-progress{height:6px;margin:0 0 6px}
+#spendwise-root .overview-category .budget-progress i{background:var(--custom-accent,#439e91)}
+#spendwise-root .overview-category small{font-size:10px;color:var(--app-muted,#929ab0)}
+#spendwise-root .overview-recent{margin-top:16px}
+#spendwise-root .overview-transaction-list{display:grid}
+#spendwise-root .overview-transaction{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--app-border,#262d40);min-width:0}
+#spendwise-root .overview-transaction:last-child{border-bottom:0;padding-bottom:0}
+#spendwise-root .transaction-icon{display:grid;place-items:center;width:36px;height:36px;flex-shrink:0;border-radius:11px;font-size:16px;font-weight:700}
+#spendwise-root .income-icon{background:#17372f;color:#65d6a7}
+#spendwise-root .expense-icon{background:#35232c;color:#f08ca0}
+#spendwise-root .transaction-copy{display:grid;gap:5px;min-width:0;flex:1}
+#spendwise-root .transaction-copy b{font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#spendwise-root .transaction-copy small{font-size:10px;color:var(--app-muted,#929ab0)}
+#spendwise-root .overview-transaction>strong{font-size:12px;white-space:nowrap}
+#spendwise-root .transaction-expense{color:#f08ca0}
+#spendwise-root .overview-empty{display:flex;flex-direction:column;align-items:center;text-align:center;padding:24px 10px;gap:8px}
+#spendwise-root .overview-empty>span{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:#18302f;color:#73d6c4;font-size:20px}
+#spendwise-root .overview-empty b{font-size:12px}
+#spendwise-root .overview-empty p{margin:0 0 5px}
+#spendwise-root.theme-light .overview-category-top>span,
+#spendwise-root.theme-light .overview-transaction .transaction-copy b{color:#202638!important}
+#spendwise-root.theme-light .overview-transaction{border-bottom-color:#e4e9f1}
+#spendwise-root.theme-light .income-icon{background:#e1f6ec;color:#207a54}
+#spendwise-root.theme-light .expense-icon{background:#ffedf0;color:#b43c58}
+#spendwise-root.theme-light .overview-empty>span{background:#e3f5f0;color:#267968}
+@media(max-width:1100px){#spendwise-root .overview-categories{min-height:0}}
+@media(max-width:720px){#spendwise-root .overview-panel-heading{gap:8px}#spendwise-root .overview-panel-heading p{max-width:38ch}#spendwise-root .overview-transaction{gap:9px}#spendwise-root .transaction-icon{width:32px;height:32px}#spendwise-root .overview-transaction>strong{font-size:11px}}
+
+
 /* CSS editor improvements: predictable tokens, readable controls and responsive editor */
 #spendwise-root{
   --sw-accent:var(--custom-accent,#439e91);

@@ -31,3 +31,7 @@
 .workspace>.columns{margin-top:20px}
 .workspace>.table-panel{margin-top:20px}
 @media(max-width:760px){.sidebar{display:block}.sidebar .nav-label{display:block;margin:12px 0 6px}.sidebar .nav-link{display:inline-block;width:auto;margin:3px 3px 3px 0;padding:10px 11px;font-size:12px}.sidebar .user-area{display:block;margin-top:12px}.workspace>.columns{grid-template-columns:1fr}}
+
+/* Functional report layouts */
+.trend-list{display:grid;gap:16px;margin-top:20px}.trend-row{display:grid;grid-template-columns:110px minmax(90px,1fr) minmax(180px,auto);gap:14px;align-items:center;font-size:12px}.trend-bars{display:grid;gap:5px}.trend-bars i{display:block;height:9px;border-radius:8px;min-width:2px}.trend-income{background:#45b78b}.trend-expense{background:#df6877}.calendar-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:9px;margin-top:20px}.calendar-day{min-height:82px;border:1px solid var(--line,#e1e8e2);border-radius:10px;padding:9px;display:flex;flex-direction:column;justify-content:space-between;gap:8px}.calendar-day small{color:var(--muted,#66736b)}.calendar-day b{font-size:12px;overflow-wrap:anywhere}.calendar-day.has-spend{background:var(--soft,#edf5ef);border-color:var(--accent,#39865e)}
+@media(max-width:760px){.trend-row{grid-template-columns:1fr;gap:7px}.calendar-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}

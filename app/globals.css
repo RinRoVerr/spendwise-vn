@@ -226,3 +226,38 @@ html,body,.app-layout,.workspace{background-color:#060812;color:#eef1fa}
  .app-layout .table-scroll{overflow-x:auto}
  .app-layout table{min-width:620px}
 }
+
+
+/* CSS editor improvements: predictable tokens, readable controls and responsive editor */
+#spendwise-root{
+  --sw-accent:var(--custom-accent,#439e91);
+  --sw-surface:var(--custom-surface,#101321);
+  accent-color:var(--sw-accent);
+}
+#spendwise-root .theme-panel{
+  width:100%;max-width:100%;box-sizing:border-box;overflow:hidden;
+}
+#spendwise-root .theme-controls,
+#spendwise-root .theme-controls label,
+#spendwise-root .custom-css-label{min-width:0}
+#spendwise-root .custom-css-label textarea{
+  display:block;box-sizing:border-box;width:100%;min-height:220px;max-height:60vh;
+  tab-size:2;white-space:pre;overflow:auto;overflow-wrap:normal;
+  background:#080c16!important;color:#e5edf9!important;
+  border:1px solid #3b4862!important;border-radius:10px;
+  line-height:1.65;font-size:12px;padding:14px;
+}
+#spendwise-root .custom-css-label textarea:focus{
+  outline:2px solid var(--sw-accent);outline-offset:2px;border-color:var(--sw-accent)!important;
+}
+#spendwise-root .css-editor-help{
+  margin:9px 0 0;font-size:11px;line-height:1.65;color:#9da8bf;
+}
+#spendwise-root .css-editor-help code{
+  color:#b9f4e8;background:#1b2936;border:1px solid #304154;border-radius:4px;padding:1px 4px;
+}
+#spendwise-root .theme-panel-actions{flex-wrap:wrap}
+#spendwise-root .theme-panel-actions button{min-height:40px}
+@media(max-width:720px){
+  #spendwise-root .custom-css-label textarea{min-height:180px;font-size:11px;padding:11px}
+}

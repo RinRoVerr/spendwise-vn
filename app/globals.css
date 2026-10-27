@@ -75,3 +75,30 @@ html,body{background:#060812;color:#eef1fa}body{font-family:Inter,ui-sans-serif,
 .app-layout .table-scroll{overflow:auto}
 @media(max-width:900px){.app-layout{grid-template-columns:185px minmax(0,1fr)}.app-layout>.workspace{padding:20px 15px}.app-layout .header{align-items:flex-start}.trends-view .trend-workspace{grid-template-columns:1fr}.trends-view .trend-chart-panel{min-height:350px}}
 @media(max-width:650px){.app-layout{grid-template-columns:1fr;grid-template-rows:auto auto minmax(70vh,auto)}.app-topbar{grid-column:1;grid-row:1;padding:10px 12px;flex-wrap:wrap}.topbar-chip{display:none}.app-layout>.sidebar{grid-column:1;grid-row:2;min-height:0;height:auto;display:flex;flex-direction:row;flex-wrap:wrap;gap:3px;padding:8px;border-right:0;border-bottom:1px solid #252a3a}.app-layout>.sidebar .brand,.app-layout>.sidebar .user-area,.app-layout>.sidebar .nav-label{display:none}.app-layout>.sidebar .nav-link{width:auto;padding:8px;font-size:10px}.app-layout>.workspace{grid-column:1;grid-row:3;min-height:70vh;padding:16px 10px}.app-layout .header{flex-direction:column}.app-layout .actions{flex-wrap:wrap}.app-layout .stats{grid-template-columns:repeat(2,minmax(0,1fr))}.trends-view .trend-chart{height:210px;gap:3px}}
+
+/* Contrast fix: neutralize light native controls and any legacy white panels */
+html,body,.app-layout,.workspace{background-color:#060812;color:#eef1fa}
+.app-layout :is(input,select,textarea){background-color:#0b0e19!important;color:#eef1fa!important;border-color:#30364a!important;color-scheme:dark}
+.app-layout :is(input,select,textarea)::placeholder{color:#777f95!important;opacity:1}
+.app-layout :is(button:not(.primary):not(.nav-link):not(.filter-active):not(.chosen)){background-color:#151a29;color:#dce0ed;border-color:#30364a}
+.app-layout :is(.panel,.stat,.table-panel,.modal,.budget-item,.budget-form,.stack,.simulator-form,.simulation-result,.calendar-day,.report-switcher,.filter-panel,.report-stat,.trend-controls,.trend-chart-panel,.empty,.budget-empty){background-color:#101321!important;color:#eef1fa;border-color:#292f42}
+.app-layout :is(.panel,.stat,.table-panel,.modal,.budget-item,.budget-form,.stack,.simulator-form,.simulation-result,.calendar-day,.report-switcher,.filter-panel,.report-stat,.trend-controls,.trend-chart-panel,.empty,.budget-empty) :is(h1,h2,h3,h4,p,label,span,strong,small,td,th){color:inherit}
+.app-layout :is(.panel,.stat,.table-panel,.modal,.budget-item,.budget-form,.stack,.simulator-form,.simulation-result,.calendar-day,.report-switcher,.filter-panel,.report-stat,.trend-controls,.trend-chart-panel,.empty,.budget-empty) :is(.muted,small,.muted-text){color:#969bad}
+.app-layout .nav-link{background:transparent;color:#a5aabd;border-color:transparent}
+.app-layout .nav-link.active{background:#439e91;color:#fff}
+.app-layout .filter-actions button{background:transparent;color:#a5aabd}
+.app-layout .filter-actions button.filter-active{background:#142b2d;color:#58c7b6;border-color:#234849}
+.app-layout .segmented{background:#1b2030;border-color:#2b3042}
+.app-layout .segmented button{background:transparent;color:#a5aabd;border-color:transparent}
+.app-layout .segmented button.chosen{background:#2b3042;color:#f3f4fa}
+.app-layout .bulk-total{background:#14251f!important;color:#d8f8e9}
+.app-layout .weekday-option{background:#0b0e19!important;color:#e5e8f2;border-color:#2b3042}
+.app-layout .weekday-option:has(input:checked){background:#142b2d!important;border-color:#439e91}
+.app-layout .trend-chart{background-color:#0d101c}
+.app-layout .trend-month small,.app-layout .chart-legend{color:#a3a8ba}
+.app-layout .trend-chart-panel .trend-income{background:#55c9a0}
+.app-layout .trend-chart-panel .trend-expense{background:#ef7184}
+.app-layout .user-area,.app-layout .user-area *{color:#a5aabd}
+.app-layout .topbar-chip{background:#171b2a!important;color:#a5aabd!important;border-color:#252a3a!important}
+.app-layout .primary{background:#439e91!important;color:#fff!important;border-color:#439e91!important}
+.app-layout .positive{color:#51c99b!important}.app-layout .negative{color:#f07887!important}

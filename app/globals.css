@@ -14,3 +14,13 @@
 .budget-progress i.over{background:#d75a4a}
 .negative{color:#d75a4a}
 @media(max-width:520px){.budget-form{grid-template-columns:1fr}.budget-form button{grid-column:auto}}
+
+
+/* Batch entry for a selected seven-day period */
+.weekday-picker{border:1px solid var(--line);border-radius:10px;padding:12px;margin:0;display:grid;gap:8px}
+.weekday-picker legend{font-size:12px;font-weight:700;padding:0 5px}
+.weekday-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.weekday-option{display:flex;align-items:center;gap:8px;padding:9px;border:1px solid var(--line);border-radius:8px;font-size:12px;cursor:pointer}
+.weekday-option input{accent-color:var(--green);width:15px;height:15px}
+.bulk-total{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#edf5ef;padding:13px;border-radius:10px;color:var(--green)}
+@media(max-width:520px){.weekday-grid{grid-template-columns:1fr 1fr}}

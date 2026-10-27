@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS transactions (id uuid PRIMARY KEY DEFAULT gen_random_uuid(), user_id text NOT NULL, type text NOT NULL CHECK(type IN ('income','expense')), amount numeric(14,2) NOT NULL CHECK(amount>0), category varchar(60) NOT NULL, description varchar(240) NOT NULL DEFAULT '', occurred_at date NOT NULL DEFAULT CURRENT_DATE, created_at timestamptz NOT NULL DEFAULT now());
+CREATE INDEX IF NOT EXISTS transactions_user_date_idx ON transactions(user_id,occurred_at DESC,created_at DESC);
+CREATE TABLE IF NOT EXISTS budgets (id uuid PRIMARY KEY DEFAULT gen_random_uuid(),user_id text NOT NULL,category varchar(60) NOT NULL,month date NOT NULL,amount numeric(14,2) NOT NULL CHECK(amount>0),created_at timestamptz NOT NULL DEFAULT now(),UNIQUE(user_id,category,month));
+CREATE INDEX IF NOT EXISTS budgets_user_month_idx ON budgets(user_id,month DESC);

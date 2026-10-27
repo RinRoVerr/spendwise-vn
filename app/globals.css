@@ -261,3 +261,93 @@ html,body,.app-layout,.workspace{background-color:#060812;color:#eef1fa}
 @media(max-width:720px){
   #spendwise-root .custom-css-label textarea{min-height:180px;font-size:11px;padding:11px}
 }
+
+
+/* Comprehensive light-theme override: neutralize legacy dark surfaces */
+#spendwise-root.theme-light{
+  --app-bg:#f1f4f9!important;--app-sidebar:#ffffff!important;--app-panel:#ffffff!important;
+  --app-border:#dce2ec!important;--app-text:#20283a!important;--app-muted:#687386!important;
+  background:#f1f4f9!important;color:#20283a!important;
+}
+#spendwise-root.theme-light,
+#spendwise-root.theme-light .workspace,
+#spendwise-root.theme-light .trends-view,
+#spendwise-root.theme-light .workspace>section{
+  background-color:#f1f4f9!important;color:#20283a!important;
+}
+#spendwise-root.theme-light>.app-topbar,
+#spendwise-root.theme-light>.sidebar{
+  background:#ffffff!important;color:#30394d!important;border-color:#dce2ec!important;
+}
+#spendwise-root.theme-light .panel,
+#spendwise-root.theme-light .stat,
+#spendwise-root.theme-light .table-panel,
+#spendwise-root.theme-light .report-stat,
+#spendwise-root.theme-light .filter-panel,
+#spendwise-root.theme-light .trend-controls,
+#spendwise-root.theme-light .trend-chart-panel,
+#spendwise-root.theme-light .simulation-result,
+#spendwise-root.theme-light .budget-item,
+#spendwise-root.theme-light .calendar-day,
+#spendwise-root.theme-light .theme-panel,
+#spendwise-root.theme-light .modal,
+#spendwise-root.theme-light .preview{
+  background:#ffffff!important;background-image:none!important;color:#20283a!important;
+  border-color:#dce2ec!important;box-shadow:0 1px 3px #24324a0a!important;
+}
+#spendwise-root.theme-light .empty,
+#spendwise-root.theme-light .budget-empty,
+#spendwise-root.theme-light .weekday-option,
+#spendwise-root.theme-light .segmented,
+#spendwise-root.theme-light .chart-track,
+#spendwise-root.theme-light .trend-chart{
+  background-color:#f5f7fb!important;color:#30394d!important;border-color:#dce2ec!important;
+}
+#spendwise-root.theme-light .topbar-chip,
+#spendwise-root.theme-light .secondary,
+#spendwise-root.theme-light .segmented button.chosen,
+#spendwise-root.theme-light .filter-actions button.filter-active{
+  background:#edf1f7!important;color:#30394d!important;border-color:#d5dce7!important;
+}
+#spendwise-root.theme-light .nav-link{color:#596579!important}
+#spendwise-root.theme-light .nav-link.active{
+  background:var(--custom-accent,#439e91)!important;color:#ffffff!important;border-color:var(--custom-accent,#439e91)!important;
+}
+#spendwise-root.theme-light :is(h1,h2,h3,h4,b,strong,label,legend,td,th,p,span,small,li,.muted,.stat-label,.range-pill,.copyright,.user-area,.nav-label){
+  color:#30394d;
+}
+#spendwise-root.theme-light .eyebrow,
+#spendwise-root.theme-light .positive{color:#237a59!important}
+#spendwise-root.theme-light .negative{color:#c53e50!important}
+#spendwise-root.theme-light .stat.balance{
+  background:var(--custom-accent,#287d70)!important;color:#ffffff!important;
+}
+#spendwise-root.theme-light .stat.balance :is(strong,small,.stat-label){color:#ffffff!important}
+#spendwise-root.theme-light input:not([type="checkbox"]):not([type="color"]),
+#spendwise-root.theme-light select,
+#spendwise-root.theme-light textarea{
+  background:#ffffff!important;color:#20283a!important;border-color:#cbd4e2!important;
+}
+#spendwise-root.theme-light input::placeholder,
+#spendwise-root.theme-light textarea::placeholder{color:#7b8799!important}
+#spendwise-root.theme-light option{background:#ffffff!important;color:#20283a!important}
+#spendwise-root.theme-light table th{color:#687386!important;border-bottom-color:#dce2ec!important}
+#spendwise-root.theme-light table td{color:#30394d!important;border-bottom-color:#e8ecf2!important}
+#spendwise-root.theme-light .filter-intro,
+#spendwise-root.theme-light .user-area,
+#spendwise-root.theme-light .header{border-color:#dce2ec!important}
+#spendwise-root.theme-light .filter-icon,
+#spendwise-root.theme-light .bulk-total,
+#spendwise-root.theme-light .calendar-day.has-spend{
+  background:#e7f4f0!important;color:#245e53!important;border-color:#c5e3db!important;
+}
+#spendwise-root.theme-light .chart-track i,
+#spendwise-root.theme-light .budget-progress i{background:var(--custom-accent,#439e91)!important}
+#spendwise-root.theme-light .trend-chart{
+  background-image:repeating-linear-gradient(to bottom,transparent 0,transparent 24%,#e4e9f1 24.5%,transparent 25%)!important;
+}
+#spendwise-root.theme-light .trend-controls hr{border-top-color:#dce2ec!important}
+#spendwise-root.theme-light .modal-backdrop{background:#25334b66!important}
+#spendwise-root.theme-light .custom-css-label textarea{
+  background:#ffffff!important;color:#20283a!important;border-color:#cbd4e2!important;
+}

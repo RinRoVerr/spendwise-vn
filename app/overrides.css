@@ -1,0 +1,13 @@
+/* SpendWise UI overrides */
+/* Chỉ giữ lại nút Theme & CSS ở cụm điều khiển trên cùng. */
+.app-topbar .topbar-right > .topbar-chip,
+.app-topbar .topbar-right > button:not(.theme-open) {
+  display: none !important;
+}
+
+/* Đảm bảo nút thêm giao dịch nhiều ngày trong trang Giao dịch luôn hiển thị. */
+.workspace .header .actions .secondary {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+}
